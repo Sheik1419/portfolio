@@ -264,3 +264,17 @@
 
 
 // Emailjs
+    // EmailJs----------------------------------------------
+    function sendmail() {
+        console.log("inner send mail");
+        var params = {
+            name: document.getElementById("fname").value,
+            email: document.getElementById("fmail").value,
+            sub: document.getElementById("fsub").value,
+            txt: document.getElementById("ftxt").value
+        }
+        emailjs.send("service_y7qsn1y", "template_ie74t5x", params).then(function (res) {
+            alert("success! " + res.status);
+        })
+    }
+    // ---------------------------------------------------
